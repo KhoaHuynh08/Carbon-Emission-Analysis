@@ -84,3 +84,27 @@ LIMIT 10;
 | Chemicals                                        | 1949.03   | 
 | Media                                            | 1534.47   | 
 | Software & Services                              | 1368.94   | 
+### What are the companies with the highest contribution to carbon emissions?
+```sql
+SELECT 
+	company_name,
+	ROUND(avg(carbon_footprint_pcf),2) AS Avg_pcf
+FROM product_emissions prd_em
+JOIN companies 
+	ON prd_em.company_id = companies.id 
+GROUP BY company_id
+ORDER BY avg(carbon_footprint_pcf) DESC
+LIMIT 10;
+```
+| company_name                           | Avg_pcf    | 
+| -------------------------------------: | ---------: | 
+| "Gamesa Corporación Tecnológica, S.A." | 2444616.00 | 
+| "Hino Motors, Ltd."                    | 191687.00  | 
+| Arcelor Mittal                         | 83503.50   | 
+| Weg S/A                                | 53551.67   | 
+| Daimler AG                             | 43089.19   | 
+| General Motors Company                 | 34251.75   | 
+| Volkswagen AG                          | 26238.40   | 
+| Waters Corporation                     | 24162.00   | 
+| "Daikin Industries, Ltd."              | 17600.00   | 
+| CJ Cheiljedang                         | 15802.83   | 
