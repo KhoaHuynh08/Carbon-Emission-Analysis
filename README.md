@@ -108,3 +108,27 @@ LIMIT 10;
 | Waters Corporation                     | 24162.00   | 
 | "Daikin Industries, Ltd."              | 17600.00   | 
 | CJ Cheiljedang                         | 15802.83   | 
+### What are the companies with the highest contribution to carbon emissions?
+```sql
+SELECT 
+	country_name,
+	ROUND(avg(carbon_footprint_pcf),2) AS Avg_pcf
+FROM product_emissions prd_em
+JOIN countries 
+	ON prd_em.country_id = countries.id 
+GROUP BY country_id
+ORDER BY avg(carbon_footprint_pcf) DESC
+LIMIT 10;
+```
+| country_name | Avg_pcf   | 
+| -----------: | --------: | 
+| Spain        | 699009.29 | 
+| Luxembourg   | 83503.50  | 
+| Germany      | 33600.37  | 
+| Brazil       | 9407.61   | 
+| South Korea  | 5665.61   | 
+| Japan        | 4600.26   | 
+| Netherlands  | 2011.91   | 
+| India        | 1535.88   | 
+| USA          | 1332.60   | 
+| South Africa | 1119.27   | 
