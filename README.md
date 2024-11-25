@@ -132,3 +132,19 @@ LIMIT 10;
 | India        | 1535.88   | 
 | USA          | 1332.60   | 
 | South Africa | 1119.27   | 
+### What is the trend of carbon footprints (PCFs) over the years?
+```sql
+SELECT 
+	year,
+	ROUND(avg(carbon_footprint_pcf),2) AS Avg_pcf
+FROM product_emissions prd_em
+GROUP BY year
+LIMIT 10;
+```
+| year | Avg_pcf  | 
+| ---: | -------: | 
+| 2013 | 2399.32  | 
+| 2014 | 2457.58  | 
+| 2015 | 43188.90 | 
+| 2016 | 6891.52  | 
+| 2017 | 4050.85  | 
