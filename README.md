@@ -1,6 +1,6 @@
 # Carbon-Emission-Analysis
 
-##Data Structure
+## Data Structure
 ### Table product_emissions
 ```sql
 SELECT * FROM product_emissions LIMIT 5;
@@ -13,7 +13,7 @@ SELECT * FROM product_emissions LIMIT 5;
 | 10261-1-2017 | 14         | 16         | 25                | 2017 | Multifunction Printers                                          | 110       | 1488                 | 30.65                      | 5.51                         | 63.84                        | 
 | 10261-2-2017 | 14         | 16         | 25                | 2017 | Multifunction Printers                                          | 110       | 1818                 | 25.08                      | 4.51                         | 70.41                        | 
 
-###Product Produce the most to Carbon emission
+### Product Produce the most to Carbon emission
 ```sql
 SELECT * FROM product_emissions ORDER BY carbon_footprint_pcf DESC;
 ```
