@@ -162,6 +162,8 @@ JOIN industry_groups ind_gr ON ind_gr.id = prd_em.industry_group_id
 GROUP BY ind_gr.industry_group
 ORDER BY ind_gr.industry_group ASC;
 ```
+Pharmaceuticals, Biotechnology & Life Sciences  , Media has demonstrated the most notable decrease in carbon footprints over time
+
 | Industry Group                                                         | 2013 Emission | 2014 Emission | 2015 Emission | 2016 Emission | 2017 Emission | 
 | ---------------------------------------------------------------------: | ------------: | ------------: | ------------: | ------------: | ------------: | 
 | "Consumer Durables, Household and Personal Products"                   | 0.00          | 0.00          | 116.38        | 0.00          | 0.00          | 
