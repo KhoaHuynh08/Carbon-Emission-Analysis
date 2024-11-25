@@ -108,7 +108,7 @@ LIMIT 10;
 | Waters Corporation                     | 24162.00   | 
 | "Daikin Industries, Ltd."              | 17600.00   | 
 | CJ Cheiljedang                         | 15802.83   | 
-### What are the companies with the highest contribution to carbon emissions?
+### What are the countries with the highest contribution to carbon emissions?
 ```sql
 SELECT 
 	country_name,
