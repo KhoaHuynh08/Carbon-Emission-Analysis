@@ -22,7 +22,8 @@ FROM product_emissions
 GROUP BY product_name
 ORDER BY avg(carbon_footprint_pcf) DESC
 LIMIT 10;
-```| product_name                                                                                                                       | Avg_pcf    | 
+```
+| product_name                                                                                                                       | Avg_pcf    | 
 | ---------------------------------------------------------------------------------------------------------------------------------: | ---------: | 
 | Wind Turbine G128 5 Megawats                                                                                                       | 3718044.00 | 
 | Wind Turbine G132 5 Megawats                                                                                                       | 3276187.00 | 
